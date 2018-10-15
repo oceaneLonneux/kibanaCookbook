@@ -12,7 +12,7 @@
 # end
 
 
-describe package("python2.7") do
+describe package("openjdk-8-jdk") do
   it { should be_installed }
-  its('version') { should match '2.7'  }
+  its('version') { should match '8.181.0'  }
 end
