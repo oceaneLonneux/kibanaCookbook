@@ -4,4 +4,10 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-cookbook 'java_se', '= 8.181.0'
+apt_update "update_sources" do
+  action :update
+end
+
+package "openjdk-8-jdk" do
+  action :install
+end

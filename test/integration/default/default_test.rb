@@ -14,5 +14,5 @@
 
 describe package("openjdk-8-jdk") do
   it { should be_installed }
-  its('version') { should match '8.181.0'  }
+  its('version') { should match '8u181-b13-0ubuntu0.16.04.1'  }
 end

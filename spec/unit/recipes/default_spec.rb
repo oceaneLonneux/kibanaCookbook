@@ -18,17 +18,13 @@ describe 'kibana::default' do
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
-    #
-    # it "should run apt get update" do
-    #   expect(chef_run).to update_apt_update('update_sources')
-    # end
-    #
-    # it "should install python 2.7" do
-    #   expect(chef_run).to install_package('python2.7')
-    # end
-    #
-    # it 'converges successfully' do
-    #   expect { chef_run }.to_not raise_error
-    # end
+
+    it "should run apt get update" do
+      expect(chef_run).to update_apt_update('update_sources')
+    end
+
+    it "should install python 2.7" do
+      expect(chef_run).to install_package('openjdk-8-jdk')
+    end
   end
 end
