@@ -45,6 +45,5 @@ end
 
 template '/templates/kibana.yml.erb' do
   source 'kibana.yml.erb'
-  notifies(:create, 'service[kibana]')
 end
 # need to check

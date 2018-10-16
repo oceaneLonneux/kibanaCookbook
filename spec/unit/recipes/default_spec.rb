@@ -45,5 +45,6 @@ describe 'kibana::default' do
       expect(chef_run).to create_template("/templates/kibana.yml.erb")
     end
 
+
   end
 end
