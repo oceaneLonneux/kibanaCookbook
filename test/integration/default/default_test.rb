@@ -13,13 +13,13 @@ end
 
 describe package("kibana") do
   it { should be_installed }
-  its('version') { should match '6.4.0'  }
+  its('version') { should match /6.4\./  }
 end
 
 # service enable
 describe service "kibana" do
   it { should be_enabled }
-  it { should be_started }
+  it { should be_running }
 end
 
 describe package("apt-transport-https") do
