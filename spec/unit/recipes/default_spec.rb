@@ -42,7 +42,7 @@ describe 'kibana::default' do
       expect(chef_run).to run_bash('add-bash-https')
     end
     it "should create a kibana.yml in /etc/kibana/kibana.yml" do
-      expect(chef_run).to create_template("/templates/kibana.yml")
+      expect(chef_run).to create_template("/etc/kibana/kibana.yml")
     end
 
   end
