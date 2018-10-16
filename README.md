@@ -1,8 +1,8 @@
 # kibana
 
 1. Dont forget to change to solorunner, in default spec.
-⋅⋅⋅ Complete the spec_helper.
-... in .kitchen.yml :
+⋅⋅⋅ Complete the spec_helper.⋅⋅
+... in .kitchen.yml :⋅⋅
 
 ```platforms:
   - name: ubuntu-16.04
