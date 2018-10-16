@@ -43,7 +43,8 @@ service 'kibana' do
   action :start
 end
 
-template '/templates/kibana.yml.erb' do
+template '/etc/kibana/kibana.yml' do
   source 'kibana.yml.erb'
 end
+
 # need to check
