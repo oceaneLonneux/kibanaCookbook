@@ -31,9 +31,6 @@ describe 'kibana::default' do
     it "should update sources" do
       expect(chef_run).to update_apt_update("update_sources")
     end
-    # it 'should add kibana to the sources list' do
-    #   expect(chef_run).to run_bash('start-kibana')
-    # end
     it "should enable kibana" do
       expect(chef_run).to enable_service("kibana")
       expect(chef_run).to start_service("kibana")
@@ -43,6 +40,9 @@ describe 'kibana::default' do
     end
     it "should add bash https" do
       expect(chef_run).to run_bash('add-bash-https')
+    end
+    it "should create a template in /templates" do
+      expect(chef_run).to create_template("/templates/kibana.yml.erb")
     end
 
   end
